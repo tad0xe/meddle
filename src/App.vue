@@ -610,6 +610,7 @@ button{
         
             
        }
+       
        .moni{
          background: url('./assets/monitor.svg');
        }

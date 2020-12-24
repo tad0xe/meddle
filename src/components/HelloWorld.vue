@@ -3,12 +3,12 @@
   
 <div class="hum">
   <div class="mik" > <a href="#default" style="text-decoration:none; padding-top:10px;" ><span style="color:white;">EXPLAIN</span><span style="color:#01DBCA;">MONKEY</span> </a>
-    <a href="#papup1" style=" text-decoration:none; color:white; border:1px solid #01DBCA; margin-right:-80px; padding:10px; border-radius:5px; ma  font-family: 'Source Sans Pro Semibold', 'Source Sans Pro Regular', 'Source Sans Pro', sans-serif;
+    <a href="#papup1" style=" text-decoration:none; color:white; border:1px solid #01DBCA; margin-right:-50px; padding:10px; border-radius:5px; ma  font-family: 'Source Sans Pro Semibold', 'Source Sans Pro Regular', 'Source Sans Pro', sans-serif;
     font-weight: 600;
     font-style: normal;
     font-size: 16px;">Create An Account</a>
     
-    <div class="navigationdrawer" style="margin-right:30px; padding-top:10px;">
+    <div class="navigationdrawer" style="margin-right:20px; padding-top:10px;">
   
        <span  @click="toggleNav" style="color:#5DE8DF; font-size:30px;cursor:pointer;">&#9776;</span>
  
@@ -17,9 +17,12 @@
     </div>
   <nav>
 		<ul  ref="nav">
-			<figure class="image-logo">
-	</figure>
-			</ul>
+      <li style="color:black;">Home</li>
+      <li style="color:black;">About us</li>
+      <li style="color:black;">Contact us</li>
+		
+
+    	</ul>
 	</nav> 
    <div>
      <h1 style="font-family: 'Source Sans Pro Bold', 'Source Sans Pro Regular', 'Source Sans Pro', sans-serif;
@@ -29,14 +32,14 @@
     letter-spacing: 2px;
     text-align: left;
     color:white;
-    line-height: 32px;padding-left:20px; position:relative; top:-90px;">Save Money Asking <br> Our Experts <br> Questions<div style="background:#5DE8DF; height:5px;width:5px; border-radius:5px;"></div></h1>
-
+    line-height: 32px;padding-left:20px; position:relative; top:-90px;">Save Money Asking <br> Our Experts <br> Questions<div style="background:#5DE8DF; height:8px;width:8px; position:relative; left:180px; top:-13px; border-radius:8px;"></div></h1>
+<p style="color:white; position:relative; left:25px; top:-170px;">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Curabitur hendrerit mattis arcu. </p>
      </div> 
      <a style="text-decoration:none;"  href="#popup1">
-<div class="box" style="background:white; border-radius:5px; position:relative; bottom:70px; right:-45px; height:50px; width:80%;"><p style="padding-top:18px;opacity:0.3;">Type your questions here</p>
+<div class="box" style="background:white; border-radius:5px; position:relative; bottom:110px; right:-45px; height:50px; width:80%;"><p style="padding-top:18px;opacity:0.3;">Type your questions here</p>
 </div>
      </a>
-     	<a class="button" style="background:#01DBCA; position:relative;left:250px; padding-left:15px; bottom:103px;color:black;">Get An Answer</a>
+     	<a class="button" style="background:#01DBCA; position:relative;left:250px; padding-left:15px; bottom:143px;color:black;">Get An Answer</a>
 <div id="popup1" class="overlay">
 	<div class="popup">
 		<h2 style="font-weight: 600;
@@ -384,9 +387,12 @@
     text-align:center;
     line-height: 10px; ">&copy  Copyright 2020. ExplainMonkey All rights reserved.</p>
 </div>
+<div style="display:flex; position:relative; bottom:65px; left:350px;">
+<div style="height:30px; width:30px; background-repeat:no-repeat;" class="nol"></div>
+<div style="height:30px; width:30px;  margin-left:10px;background-repeat:no-repeat;" class="nop"></div>
+<div  style="height:30px; width:30px; margin-left:10px;" class="not"></div>
 
-
-
+</div>
 </div>
 
 
@@ -411,7 +417,7 @@ border-color:1px solid rgb(162, 184, 195);
 	box-shadow: 2px 2px 2px #CCC;
 	}ul {
 		display: flex;
-		height:200px;
+		height:300px;
 		align-items: center;
 		margin-block-start: 0;
 		margin-block-end: 0;
@@ -451,7 +457,10 @@ background: white;
 			li {
 				width: 100%;
 				padding-left: 0;
-				padding-right: 0;
+				padding-top: 0;
+        position: relative;
+        top: -150px;
+        opacity: 2;
 			}
 
 			a {
@@ -780,7 +789,7 @@ h1 {
 .papup {
   margin: 70px 100px;
   padding: 10px;
-  background: #fff;
+  background: white;
   border-radius: 5px;
       width: 246px;
     height: 483px;

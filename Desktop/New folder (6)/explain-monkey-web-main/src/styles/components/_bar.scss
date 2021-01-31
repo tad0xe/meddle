@@ -1,0 +1,18 @@
+.bar {
+    width: 4px;
+    min-height: 350px;
+    height: 100%;
+    background: black;
+    position: relative;
+    // display: inline-block;
+    display: inline-block;
+
+    .fa-circle {
+        top: 50%;
+        right: 50%;
+        font-size: 60px;
+        color: black;
+        transform: translate(50%, -50%);
+        position: absolute;
+    }
+}

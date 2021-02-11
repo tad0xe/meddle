@@ -1,0 +1,61 @@
+.modal {
+    background: #ffffff;
+    box-shadow: none;
+    border-radius: 10px;
+    height: 100%;
+    // display: flex;
+    // flex-direction: column;
+    padding: 20px;
+    border: none;
+    outline: none;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: $backDropColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5000;
+}
+
+.modal-close-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    color: white;
+    background: red;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    .fa-close {
+        color: whitesmoke;
+        font-size: 18px;
+    }
+}
+
+// .max-width {
+//     width: 100%;
+//     max-width: 420px;
+// }
+
+// .min-width {
+//     width: 100%;
+//     max-width: 340px;
+// }
+
+// .black-background {
+//     background: black;
+// }
+
+// .modal--large {
+//     width: 100%;
+//     max-width: 780px;
+// }

@@ -1,0 +1,78 @@
+.dashboard-container {
+    position: relative;
+    // top: 80px;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+    // width: 100%;
+    // position: fixed;
+    // z-index: 0;
+    // padding-bottom: 50px;
+    // background: $off-white;
+}
+.cont{
+    width: 100%;
+   max-width: 900px;
+}
+
+.home{
+   
+        background-image: url("assets/svg/home.svg");
+        height: 50px;
+        width: 50px;
+        background-repeat: no-repeat;
+}
+.wallet{
+   
+    background-image: url("assets/svg/wallet (2).svg");
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    
+}
+.question{
+    background-image: url("assets/svg/help.svg");
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+}
+.message{
+    background-image: url("assets/svg/envelope.svg");
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+}
+.settings{
+        background-image: url("assets/svg/iconmonstr-gear-2.svg");
+        height: 50px;
+        width: 50px;
+        background-repeat: no-repeat;
+    }
+
+.notification{
+   
+    background-image: url("assets/svg/notification.svg");
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+
+    
+}
+
+.box{
+    width: 20%;
+    height:50px;
+  
+}
+
+.nav-icon{
+    height: 5px;
+    width: 45px;
+    
+    background: black;
+
+}
+.sidebar{
+    border-top-right-radius: 25px;
+}

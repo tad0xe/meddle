@@ -1,0 +1,127 @@
+// Colors
+$aqua-haze: #ebf3f3;
+$light-green: #01dbca;
+$lighter-green: #11ffca;
+$red: red;
+$green: #50e3c2;
+$logo-color: $green;
+$dark-grey: #333;
+$dark-brown: #392912;
+$orange: #eaae5f;
+// $grey: #666;
+$grey: #aaaaaa;
+$blue: #2b74bc;
+$darkblue: #000080;
+$dark-blue: #364051;
+$off-white: #f7f7f7;
+$darkgreen: #4b7902;
+$black: black;
+$white: white;
+$light-black: #242424;
+$light-grey: #e3ecf3;
+$backDropColor: rgba(32, 28, 48, 0.5);
+$font-size-xxlg: 35px;
+$font-size-xlg: 25px;
+$font-size-lg: 20px;
+$font-size-md: 16px;
+$font-size-sm: 12px;
+$s-size: 12px;
+$m-size: 14px;
+$l-size: 12px;
+$xl-size: 22px;
+$tablet-breakpoint: 680px;
+// $tablet-breakpoint: 620px;
+$desktop-breakpoint: 960px;
+
+.red {
+    color: $red !important;
+}
+.bg-red {
+    background: $red !important;
+}
+
+.green {
+    color: $green !important;
+}
+.aqua-haze {
+    color: $aqua-haze !important;
+}
+
+.bg-green {
+    background: $green !important;
+}
+
+.bg-aqua-haze {
+    background: $aqua-haze !important;
+}
+
+.lighter-green {
+    color: $lighter-green !important;
+}
+.bg-lighter-green {
+    background: $lighter-green !important;
+}
+
+.light-green {
+    color: $light-green !important;
+}
+.bg-light-green {
+    background: $light-green !important;
+}
+
+.black {
+    color: $black !important;
+}
+.bg-black {
+    background: $black !important;
+}
+
+.white {
+    color: $white !important;
+}
+.bg-white {
+    background: $white !important;
+}
+
+.grey {
+    color: $grey !important;
+}
+.light-grey {
+    color: $light-grey !important;
+}
+
+.bg-light-black {
+    background: $light-black !important;
+}
+
+.bg-dark-brown {
+    background: $dark-brown !important;
+}
+
+.bg-light-grey {
+    background: $light-grey !important;
+}
+
+.bg-transparent {
+    background: transparent !important;
+}
+
+.bg-charcoal {
+    background: #333333;
+}
+
+.bg-grad-pink-lightpink-bottom-right {
+    background-image: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+}
+
+.bg-grad-green-yellow-bottom-right {
+    background-image: linear-gradient(to bottom right, #96fbc4, #f9f586);
+}
+
+.bg-grad-lightblue-blue-bottom-right {
+    background-image: linear-gradient(to bottom right, #74ebd5, #9face6);
+}
+
+.bg-grad-greenblue-orange-bottom-right {
+    background-image: linear-gradient(to bottom right, #16a085, #f4d03f);
+}

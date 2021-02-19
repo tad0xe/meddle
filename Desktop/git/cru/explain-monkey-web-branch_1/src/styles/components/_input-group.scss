@@ -1,0 +1,81 @@
+.input-group {
+  display: table;
+  width: 100%;
+}
+
+// .row::after {
+//   content: "";
+//   clear: both;
+//   display: table;
+// }
+
+// .column {
+//   padding: 8px 0px;
+//   width: 100%;
+//   display: inline-table;
+// }
+
+// .column-left {
+//   @extend .column;
+//   @media (min-width: $tablet-breakpoint) {
+//     width: 50%;
+//     float: left;
+//     padding-right: 10px;
+//   }
+// }
+
+// .column-right {
+//   @extend .column;
+//   @media (min-width: $tablet-breakpoint) {
+//     width: 50%;
+//     float: left;
+//     padding-left: 10px;
+//   }
+// }
+
+// .float-right {
+//   float: right;
+// }
+
+// .float-left {
+//   float: left;
+// }
+
+// .flex {
+//   display: flex;
+// }
+
+// .flex-wrap {
+//   flex-wrap: wrap;
+// }
+
+// .flex-grow {
+//   flex: 1;
+// }
+
+// .align-items {
+//   align-items: center;
+// }
+
+// .justify-content {
+//   justify-content: center;
+// }
+
+// .space-between {
+//   justify-content: space-between;
+// }
+
+// .ok-message,
+// .error-message {
+//   font-size: $font-size-small;
+//   display: block;
+// }
+
+// .ok-message {
+//   color: green;
+// }
+
+// .error-message {
+//   color: red;
+// }
+

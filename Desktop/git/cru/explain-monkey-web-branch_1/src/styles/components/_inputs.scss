@@ -1,0 +1,42 @@
+.input {
+  border: 1px solid #f2f2f2;
+  background: white;
+  border-radius: 6px;
+  // height: 40px;
+  outline: none;
+  font-size: 14px;
+  padding: 8px;
+  // margin-top: 5px;
+  width: 100%;
+
+  &:focus {
+    border: 1px solid $logo-color;
+  }
+}
+
+.focus-none {
+  &:focus {
+    border: none;
+  }
+}
+
+.select {
+  @extend .input;
+}
+
+.input-textarea {
+  @extend .input;
+  resize: none;
+  height: auto;
+}
+
+.input-label {
+  font-size: 14px;
+  display: block;
+}
+
+input:disabled {
+  border: 1px solid #ccc;
+  background: whitesmoke;
+  cursor: not-allowed;
+}

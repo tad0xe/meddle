@@ -24,7 +24,7 @@
             <i class="fa fa-star font-size-26 light-grey "></i> &nbsp;
           </div>
         </div>
-      </div>
+      </div>     
     
       <div class="float-end width-100 padding-left-10 padding-top-18 ">
       

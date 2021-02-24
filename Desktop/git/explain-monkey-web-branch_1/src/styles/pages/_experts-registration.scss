@@ -1,0 +1,64 @@
+.exp-reg-outer-container {
+}
+
+.exp-reg-intermediate-container {
+    border-radius: 10px;
+    margin-top:20px;
+    background-color: $white;
+    
+
+    @include media-breakpoint-up(xl) {
+        max-width: 1000px;
+        margin-left: 15%;
+    }
+}
+
+.exp-reg-inner-container {
+    // padding-right: 100px;
+    width: 100%;
+    left: 0;
+    // right: 10%;
+
+    @include media-breakpoint-up(lg) {
+        // padding-right: 100px;
+        // left: 15%;
+        // right: 10%;
+        padding-left: 5%;
+    }
+}
+
+.exp-reg-background-image {
+    background-image: url("assets/images/bg.svg");
+    height: 120px;
+    width: 120px;
+    background-repeat: no-repeat;
+}
+
+.border-color-red {
+    border-color: red;
+}
+.plus {
+    background-image: url("assets/images/plus.svg");
+    height: 20px;
+    width: 20px;
+}
+.exp-reg-check {
+    background-image: url("assets/images/checkbox.svg");
+    height: 150px;
+    width: 150px;
+    background-repeat: no-repeat;
+}
+.arrow-left{
+    background-image: url("assets/svg/arrow-left.svg");
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+    
+}
+.arrow-right{
+    background-image: url("assets/svg/arrow-right.svg");
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+    
+}

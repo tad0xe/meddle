@@ -1,0 +1,14 @@
+:root {
+    --mainFontFamily: 'Montserrat', sans-serif;
+}
+.title {
+    font-weight: 600;
+}
+.generalFont {
+    font-family: var(--mainFontFamily);
+    background-color: #f7fbff;
+}
+
+.hasError label {
+    color: red;
+  }

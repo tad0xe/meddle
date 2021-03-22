@@ -1,0 +1,149 @@
+.body {
+    padding: 4.5%;
+    font-size: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcyan;
+}
+
+.container {
+    border-radius: 5px;
+    max-width: 700px;
+    background-color: white;
+    border: 1px solid #dddd;
+}
+
+.header-container {
+    border-bottom: 1px solid #b6b1b1;
+    padding: 10px 40px;
+    color: $dark-blue;
+}
+
+.spaced {
+    padding-top: 20px;
+}
+
+h1 {
+    font-size: 23px;
+}
+
+.personal-info-container,
+.buyer-info-container,
+.property-Location-container,
+.vehicle-home-description-container,
+.btn-container {
+    border-bottom: 1px solid #b6b1b1;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    border-bottom: none;
+}
+
+@media screen and (max-width: 780px) {
+    .header-container {
+        padding: 20px;
+    }
+
+    .personal-info-container,
+    .buyer-info-container,
+    .property-Location-container,
+    .vehicle-home-description-container,
+    .btn-container {
+        padding: 15px 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .header-container {
+        padding: 20px 10px;
+    }
+
+    .body {
+        font-size: 14px;
+        padding: 10px;
+        background-color: white;
+    }
+
+    .container {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .personal-info-container,
+    .buyer-info-container,
+    .property-Location-container,
+    .vehicle-home-description-container,
+    .btn-container {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .column1 {
+        padding-right: 5px;
+    }
+
+    .column2 {
+        padding-left: 5px;
+    }
+
+    /* For mobile phones: */
+    @media screen and (max-width: 490px) {
+        .body {
+            padding: 6px;
+        }
+
+        h1 {
+            font-size: 22px;
+        }
+
+        .personal-info-container,
+        .buyer-info-container,
+        .property-Location-container,
+        .vehicle-home-description-container,
+        .btn-container {
+            padding: 20px 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .column1 {
+            padding-right: 0px;
+            width: 100%;
+        }
+
+        .column2 {
+            padding-left: 0px;
+            width: 100%;
+        }
+
+        .secondary-btn {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        @media screen and (max-width: 380px) {
+            h1 {
+                font-size: 21px;
+            }
+
+            .personal-info-container,
+            .buyer-info-container,
+            .property-Location-container,
+            .vehicle-home-description-container,
+            .btn-container {
+                padding: 20px 5px;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+    }
+}

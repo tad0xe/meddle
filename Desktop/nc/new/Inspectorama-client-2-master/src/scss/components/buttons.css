@@ -1,0 +1,90 @@
+.primary-btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 25px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  background-color: #02a7f0;
+  opacity: 0.95;
+}
+.primary-primary-btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 25px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  background-color: red;
+  opacity: 0.95;
+}
+.primary-btn:hover,
+.primary-primary-btn:hover {
+  opacity: 1;
+}
+.small-primary-btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 25px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  font-size: 13px;
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 1px 5px;
+  background-color: #ea7601;
+  border: solid;
+  border-color: #ed6502 #a04300 #a04300 #ed6502;
+  opacity: 0.9;
+}
+.small-primary-btn:hover {
+  opacity: 1;
+}
+.small-primary-btn:active {
+  opacity: 0.95;
+  border-color: #a04300 #ed6502 #ed6502 #a04300;
+}
+.secondary-btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 25px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  border-radius: 30px;
+  background-color: #02a7f0;
+  font-weight: lighter;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 11px 25px;
+  width: 100%;
+  border-radius: 20px;
+  opacity: 0.97;
+}
+.secondary-btn:hover {
+  opacity: 1;
+}

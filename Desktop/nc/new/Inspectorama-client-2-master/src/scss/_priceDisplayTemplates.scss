@@ -1,0 +1,131 @@
+.body {
+    font-family: sans-serif, Arial, Helvetica;
+    padding: 4.5%;
+    font-size: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcyan;
+
+    .container {
+        border-radius: 5px;
+        background-color: white;
+        border: 1px solid #dddd;
+    }
+}
+
+.container-header {
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 10px;
+    color: $dark-blue;
+    border-bottom: 1px solid #b6b1b1;
+}
+
+.container-content {
+    padding: 10px 25px;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    // vertical-align: top;
+}
+
+tr .spaced {
+    padding-right: 25px;
+}
+
+// input {
+//     font-size: 14px;
+//     padding: 6px;
+//     border-radius: 3px;
+//     font-weight: bold;
+//     outline: none;
+//     border: 1px solid #ccc;
+//     background-color: aliceblue;
+// }
+
+// input:focus {
+//     border: 1px solid $dark-blue;
+//     background-color: rgb(232, 240, 254);
+// }
+
+// .btn-container {
+//     display: flex;
+//     justify-content: center;
+//     border-bottom: none;
+// }
+
+// .invalid input {
+//     border: 1px solid red;
+// }
+
+// .invalid .spaced {
+//     color: red;
+// }
+
+// span {
+//     color: red;
+//     font-size: 12px;
+//     display: block;
+// }
+
+@media screen and (max-width: 560px) {
+    .body {
+        font-size: 14px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: white;
+    }
+
+    tr .spaced {
+        padding-right: 10px;
+    }
+
+    /* For mobile phones: */
+    @media screen and (max-width: 520px) {
+        .body {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .container-header {
+            font-size: 22px;
+        }
+
+        .container-content {
+            padding: 10px;
+        }
+
+        // .complete-booking-btn {
+        //     margin-top: 20px;
+        //     margin-bottom: 20px;
+        //     font-size: 15px;
+        // }
+
+        @media screen and (max-width: 410px) {
+            .body {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+
+            .container-content {
+                padding: 5px;
+            }
+
+            .container-header {
+                font-size: 21px;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+    }
+}

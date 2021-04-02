@@ -1,0 +1,123 @@
+$inputFontSize: 12px;
+$labelFontSize: 13px;
+$headerFontSize: 20px;
+$closeBtnFontSize: 22px;
+$headerColor: $primaryColor;
+$errorFontSize: 12px;
+$sendBtnFontSize: 16px;
+$closeBtnColor: orangered;
+$sendBtnColor: orangered;
+$deleteBtnColor: red;
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #ffffff;
+  box-shadow: 2px 2px 20px 1px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif, Arial, Helvetica;
+  padding: 20px;
+  width: 360px;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+}
+
+.modal-header-text {
+  font-size: $headerFontSize;
+  color: $headerColor;
+  flex: 1;
+  font-weight: bold;
+}
+
+.btn-close {
+  font-size: $closeBtnFontSize;
+  cursor: pointer;
+  color: $closeBtnColor;
+  opacity: 0.97;
+}
+
+.btn-close-upper:hover {
+  opacity: 1;
+}
+
+.modal-content {
+  width: 100%;
+  display: inline-block;
+}
+
+.modal-body {
+  padding-bottom: 10px;
+}
+
+.modal-footer {
+  border-top: 1.5px solid #eeeeee;
+}
+
+// span
+//   color: red
+//   font-size: 11px
+//   display: block
+
+.send-btn,
+.delete-btn {
+  font-size: $sendBtnFontSize;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  padding: 8px 16px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  opacity: 0.97;
+}
+
+.send-btn {
+  border: 2px solid $sendBtnColor;
+  background-color: $sendBtnColor;
+}
+
+.delete-btn {
+  border: 2px solid $deleteBtnColor;
+  background-color: $deleteBtnColor;
+}
+
+.send-btn:hover,
+.delete-btn:hover {
+  opacity: 1;
+}
+
+// For mobile:
+@media only screen and (max-width: 380px) {
+  .modal-backdrop {
+    padding: 5px;
+  }
+
+  .modal-header-text {
+    font-size: 19px;
+  }
+
+  .modal {
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+  }
+}

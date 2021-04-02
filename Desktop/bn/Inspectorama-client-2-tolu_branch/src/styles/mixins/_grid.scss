@@ -1,0 +1,520 @@
+/// Grid system
+//
+// Generate semantic grid columns with these mixins.
+
+@mixin make-color($colors: $colors) {
+  @each $color in map-keys($colors) {
+    $color-value: map-get($colors, $color);
+    .#{$color} {
+      color: #{$color-value} !important;
+    }
+    .bg-#{$color} {
+      background: #{$color-value} !important;
+    }
+  }
+}
+
+@mixin make-border-color($colors: $colors) {
+  @each $color in map-keys($colors) {
+    $color-value: map-get($colors, $color);
+    .border-color-#{$color} {
+      border-color: #{$color-value} !important;
+    }
+  }
+}
+
+@mixin make-font-size($breakpoints: $grid-breakpoints) {
+  @for $i from 4 through 60 {
+    $dimension: $i;
+    .font-size-#{$dimension} {
+      font-size: #{$dimension}px;
+    }
+    @each $breakpoint in map-keys($breakpoints) {
+      $infix: breakpoint-infix($breakpoint, $breakpoints);
+      @if not($infix == "") {
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+          .font-size#{$infix}-#{$dimension} {
+            font-size: #{$dimension}px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin make-line-height($breakpoints: $grid-breakpoints) {
+  @for $i from 4 through 60 {
+    $dimension: $i;
+    .line-height-#{$dimension} {
+      line-height: #{$dimension}px;
+    }
+    @each $breakpoint in map-keys($breakpoints) {
+      $infix: breakpoint-infix($breakpoint, $breakpoints);
+      @if not($infix == "") {
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+          .line-height#{$infix}-#{$dimension} {
+            line-height: #{$dimension}px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin make-fixed-height() {
+  @for $i from 1 through 160 {
+    $dimension: $i * 10;
+    .fixed-height-#{$dimension} {
+      height: #{$dimension}px !important;
+    }
+  }
+}
+
+@mixin make-fixed-width() {
+  @for $i from 1 through 160 {
+    $dimension: $i * 10;
+    .fixed-width-#{$dimension} {
+      width: #{$dimension}px !important;
+    }
+  }
+}
+
+@mixin make-min-width() {
+  @for $i from 1 through 160 {
+    $dimension: $i * 10;
+    .min-width-#{$dimension} {
+      min-width: #{$dimension}px !important;
+    }
+  }
+}
+
+@mixin make-max-width() {
+  @for $i from 1 through 160 {
+    $dimension: $i * 10;
+    .max-width-#{$dimension} {
+      width: 100% !important;
+      max-width: #{$dimension}px !important;
+    }
+  }
+}
+
+@mixin make-border() {
+  @for $i from 0 through 4 {
+    $dimension: $i;
+    .border-#{$dimension} {
+      border: #{$dimension}px solid !important;
+    }
+    .border-top-#{$dimension} {
+      border-top: #{$dimension}px solid !important;
+    }
+    .border-bottom-#{$dimension} {
+      border-bottom: #{$dimension}px solid !important;
+    }
+    .border-left-#{$dimension} {
+      border-left: #{$dimension}px solid !important;
+    }
+    .border-right-#{$dimension} {
+      border-right: #{$dimension}px solid !important;
+    }
+  }
+}
+
+@mixin make-border-round() {
+  @for $i from 0 through 40 {
+    $dimension: 2 * $i;
+    .border-radius-#{$dimension} {
+      border-radius: #{$dimension}px !important;
+    }
+    .border-top-radius-#{$dimension} {
+      border-top-left-radius: #{$dimension}px !important;
+      border-top-right-radius: #{$dimension}px !important;
+    }
+    .border-bottom-radius-#{$dimension} {
+      border-bottom-left-radius: #{$dimension}px !important;
+      border-bottom-right-radius: #{$dimension}px !important;
+    }
+    .border-top-left-radius-#{$dimension} {
+      border-top-left-radius: #{$dimension}px !important;
+    }
+    .border-top-right-radius-#{$dimension} {
+      border-top-right-radius: #{$dimension}px !important;
+    }
+    .border-bottom-left-radius-#{$dimension} {
+      border-bottom-left-radius: #{$dimension}px !important;
+    }
+    .border-bottom-right-radius-#{$dimension} {
+      border-bottom-right-radius: #{$dimension}px !important;
+    }
+  }
+}
+
+@mixin make-left-right-top-bottom($breakpoints: $grid-breakpoints) {
+  @for $i from 0 through 100 {
+    $dimension: $i * 2;
+    .left-#{$dimension} {
+      left: #{$dimension}px;
+    }
+    .right-#{$dimension} {
+      right: #{$dimension}px;
+    }
+    .top-#{$dimension} {
+      top: #{$dimension}px;
+    }
+    .bottom-#{$dimension} {
+      bottom: #{$dimension}px;
+    }
+    @each $breakpoint in map-keys($breakpoints) {
+      $infix: breakpoint-infix($breakpoint, $breakpoints);
+      @if not($infix == "") {
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+          .left#{$infix}-#{$dimension} {
+            left: #{$dimension}px !important;
+          }
+          .right#{$infix}-#{$dimension} {
+            right: #{$dimension}px !important;
+          }
+          .top#{$infix}-#{$dimension} {
+            top: #{$dimension}px !important;
+          }
+          .bottom#{$infix}-#{$dimension} {
+            bottom: #{$dimension}px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin make-left-right-top-bottom-percentage($breakpoints: $grid-breakpoints) {
+  @for $i from 0 through 100 {
+    .left-#{$i}-pct {
+      left: round(percentage($i/100)); // Math function
+    }
+    .right-#{$i}-pct {
+      right: round(percentage($i/100)); // Math function
+    }
+    .top-#{$i}-pct {
+      top: round(percentage($i/100)); // Math function
+    }
+    .bottom-#{$i}-pct {
+      bottom: round(percentage($i/100)); // Math function
+    }
+    @each $breakpoint in map-keys($breakpoints) {
+      $infix: breakpoint-infix($breakpoint, $breakpoints);
+      @if not($infix == "") {
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+          .left#{$infix}-#{$i}-pct {
+            left: round(percentage($i/100)) !important; // Math function
+          }
+          .right#{$infix}-#{$i}-pct {
+            right: round(percentage($i/100)) !important; // Math function
+          }
+          .top#{$infix}-#{$i}-pct {
+            top: round(percentage($i/100)) !important; // Math function
+          }
+          .bottom#{$infix}-#{$i}-pct {
+            bottom: round(percentage($i/100)) !important; // Math function
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin make-padding($breakpoints: $grid-breakpoints) {
+  @for $i from 0 through 100 {
+    $dimension: $i * 2;
+    .padding-#{$dimension} {
+      padding: #{$dimension}px;
+    }
+    .padding-right-#{$dimension} {
+      padding-right: #{$dimension}px;
+    }
+    .padding-left-#{$dimension} {
+      padding-left: #{$dimension}px;
+    }
+    .padding-top-#{$dimension} {
+      padding-top: #{$dimension}px;
+    }
+    .padding-bottom-#{$dimension} {
+      padding-bottom: #{$dimension}px;
+    }
+    @each $breakpoint in map-keys($breakpoints) {
+      $infix: breakpoint-infix($breakpoint, $breakpoints);
+      @if not($infix == "") {
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+          .padding#{$infix}-#{$dimension} {
+            padding: #{$dimension}px !important;
+          }
+          .padding-left#{$infix}-#{$dimension} {
+            padding-left: #{$dimension}px !important;
+          }
+          .padding-right#{$infix}-#{$dimension} {
+            padding-right: #{$dimension}px !important;
+          }
+          .padding-top#{$infix}-#{$dimension} {
+            padding-top: #{$dimension}px !important;
+          }
+          .padding-bottom#{$infix}-#{$dimension} {
+            padding-bottom: #{$dimension}px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin make-margin($breakpoints: $grid-breakpoints) {
+  @for $i from 0 through 100 {
+    $dimension: $i * 2;
+    .margin-#{$dimension} {
+      margin: #{$dimension}px;
+    }
+    .margin-right-#{$dimension} {
+      margin-right: #{$dimension}px;
+    }
+    .margin-left-#{$dimension} {
+      margin-left: #{$dimension}px;
+    }
+    .margin-top-#{$dimension} {
+      margin-top: #{$dimension}px;
+    }
+    .margin-bottom-#{$dimension} {
+      margin-bottom: #{$dimension}px;
+    }
+    @each $breakpoint in map-keys($breakpoints) {
+      $infix: breakpoint-infix($breakpoint, $breakpoints);
+      @if not($infix == "") {
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+          .margin#{$infix}-#{$dimension} {
+            margin: #{$dimension}px !important;
+          }
+          .margin-left#{$infix}-#{$dimension} {
+            margin-left: #{$dimension}px !important;
+          }
+          .margin-right#{$infix}-#{$dimension} {
+            margin-right: #{$dimension}px !important;
+          }
+          .margin-top#{$infix}-#{$dimension} {
+            margin-top: #{$dimension}px !important;
+          }
+          .margin-bottom#{$infix}-#{$dimension} {
+            margin-bottom: #{$dimension}px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin make-stretch-full($breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @include media-breakpoint-down($breakpoint, $breakpoints) {
+      .stretch-full#{$infix} {
+        flex: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+  }
+}
+
+@mixin make-d-flex-display($breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+    .d-flex-display#{$infix} {
+      display: none !important;
+    }
+    @if not($infix == "") {
+      @include media-breakpoint-down($breakpoint, $breakpoints) {
+        .d-flex-display#{$infix} {
+          display: flex !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin make-d-block-display($breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+    .d-block-display#{$infix} {
+      display: none !important;
+    }
+    @if not($infix == "") {
+      @include media-breakpoint-down($breakpoint, $breakpoints) {
+        .d-block-display#{$infix} {
+          display: block !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin make-hidden-d-flex($breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+    .d-flex-hidden#{$infix} {
+      display: none !important;
+    }
+    @if not($infix == "") {
+      @include media-breakpoint-up($breakpoint, $breakpoints) {
+        .d-flex-hidden#{$infix} {
+          display: flex !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin make-hidden-d-block($breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+    .d-block-hidden#{$infix} {
+      display: none !important;
+    }
+    @if not($infix == "") {
+      @include media-breakpoint-up($breakpoint, $breakpoints) {
+        .d-block-hidden#{$infix} {
+          display: block !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin make-hidden-row($breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+    .row-hidden#{$infix} {
+      display: none !important;
+    }
+    @if not($infix == "") {
+      @include media-breakpoint-up($breakpoint, $breakpoints) {
+        .row-hidden#{$infix} {
+          display: flex !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin make-row($gutter: 1.5rem) {
+  // --#{$variable-prefix}gutter-x: #{$gutter};
+  // --#{$variable-prefix}gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  // margin-top: calc(var(--#{$variable-prefix}gutter-y) * -1); // stylelint-disable-line function-disallowed-list
+  // margin-right: calc(var(--#{$variable-prefix}gutter-x) / -2); // stylelint-disable-line function-disallowed-list
+  // margin-left: calc(var(--#{$variable-prefix}gutter-x) / -2); // stylelint-disable-line function-disallowed-list
+}
+
+@mixin make-col-ready($gutter: 1.5rem) {
+  // Add box sizing if only the grid is loaded
+  // box-sizing: if(variable-exists(include-column-box-sizing) and $include-column-box-sizing, border-box, null);
+  // Prevent columns from becoming too narrow when at smaller grid tiers by
+  // always setting `width: 100%;`. This works because we set the width
+  // later on to override this initial width.
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%; // Prevent `.col-auto`, `.col` (& responsive variants) from breaking out the grid
+  // padding-right: calc(var(--#{$variable-prefix}gutter-x) / 2); // stylelint-disable-line function-disallowed-list
+  // padding-left: calc(var(--#{$variable-prefix}gutter-x) / 2); // stylelint-disable-line function-disallowed-list
+  // margin-top: var(--#{$variable-prefix}gutter-y);
+}
+
+@mixin make-col($size, $columns: $grid-columns) {
+  flex: 0 0 auto;
+  width: percentage($size / $columns);
+}
+
+@mixin make-col-auto() {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+@mixin make-col-offset($size, $columns: $grid-columns) {
+  $num: $size / $columns;
+  margin-left: if($num == 0, 0, percentage($num));
+}
+
+// Row columns
+//
+// Specify on a parent element(e.g., .row) to force immediate children into NN
+// numberof columns. Supports wrapping to new lines, but does not do a Masonry
+// style grid.
+@mixin row-cols($count) {
+  > * {
+    flex: 0 0 auto;
+    width: 100% / $count;
+  }
+}
+
+// Framework grid generation
+//
+// Used only by Bootstrap to generate the correct number of grid classes given
+// any value of `$grid-columns`.
+
+@mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+      .col#{$infix} {
+        flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+      }
+
+      .row-cols#{$infix}-auto > * {
+        @include make-col-auto();
+      }
+
+      @if $grid-row-columns > 0 {
+        @for $i from 1 through $grid-row-columns {
+          .row-cols#{$infix}-#{$i} {
+            @include row-cols($i);
+          }
+        }
+      }
+
+      .col#{$infix}-auto {
+        @include make-col-auto();
+      }
+
+      @if $columns > 0 {
+        @for $i from 1 through $columns {
+          .col#{$infix}-#{$i} {
+            @include make-col($i, $columns);
+          }
+        }
+
+        // `$columns - 1` because offsetting by the width of an entire row isn't possible
+        @for $i from 0 through ($columns - 1) {
+          @if not($infix == "" and $i == 0) {
+            // Avoid emitting useless .offset-0
+            .offset#{$infix}-#{$i} {
+              @include make-col-offset($i, $columns);
+            }
+          }
+        }
+      }
+
+      // Gutters
+      //
+      // Make use of `.g-*`, `.gx-*` or `.gy-*` utilities to change spacing between the columns.
+      @each $key, $value in $gutters {
+        .g#{$infix}-#{$key},
+        .gx#{$infix}-#{$key} {
+          --#{$variable-prefix}gutter-x: #{$value};
+        }
+
+        .g#{$infix}-#{$key},
+        .gy#{$infix}-#{$key} {
+          --#{$variable-prefix}gutter-y: #{$value};
+        }
+      }
+    }
+  }
+}

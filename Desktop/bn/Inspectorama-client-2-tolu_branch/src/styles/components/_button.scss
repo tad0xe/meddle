@@ -1,0 +1,23 @@
+.btn {
+  border: none;
+  outline: none;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0.97;
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+.btn:disabled {
+  opacity: 0.15; 
+  &:hover {
+    opacity: 0.15;
+    cursor: not-allowed;
+  }
+}

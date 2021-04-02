@@ -1,0 +1,23 @@
+// @import "./base/settings";
+@import "./mixins/mixins";
+@import "./base/base";
+@import "./components/nav";
+@import "./components/inputs";
+@import "./components/modal";
+@import "./components/progress-bar";
+@import "./components/button";
+@import "./components/pagination";
+@import "./layouts/header";
+@import "./layouts/container";
+@import "./layouts/content-container";
+@import "./layouts/form";
+@import "./components/table";
+@import "./components/horizontal-line";
+@import "./pages/home";
+@import "./pages/dashboard";
+@import "./layouts/app-router";
+@import "./components/visibility";
+@import "./layouts/grid"; 
+@import "./components/icons";
+@import "./components/box-shadow";
+

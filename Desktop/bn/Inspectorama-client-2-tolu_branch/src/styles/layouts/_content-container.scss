@@ -1,0 +1,10 @@
+.content-container {
+  margin: 0 auto;
+  padding: 0px 10px;
+  width: 100%;
+  max-width: 1500px;
+
+  @include media-breakpoint-up(md) {
+    padding: 0px 20px;
+  }
+}

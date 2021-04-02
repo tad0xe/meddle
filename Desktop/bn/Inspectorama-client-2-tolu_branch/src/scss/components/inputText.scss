@@ -1,0 +1,194 @@
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.flex {
+    align-items: center;
+    display: flex;
+}
+
+.flex-grow {
+    flex: 1;
+}
+
+.column {
+    margin-top: 8px;
+    margin-bottom: 4px;
+    width: 100%;
+    display: inline-block;
+}
+
+.column,
+.column1,
+.column2 {
+    .date-picker {
+        width: 100%;
+    }
+}
+
+.date-picker /deep/ input {
+    font-size: $inputFontSize;
+    width: 100%;
+    margin-top: 6px;
+    color: black;
+    border-radius: 3px;
+    background-clip: padding-box;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #ccc;
+    background-color: aliceblue;
+    display: block;
+}
+
+input,
+select {
+    font-size: $inputFontSize;
+    padding: 10px 8px;
+    margin-top: 5px;
+    border-radius: 3px;
+    // font-weight: bold;
+    outline: none;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: aliceblue;
+}
+
+.default-input {
+    font-size: 12px;
+    padding: 2px;
+    margin: 0px;
+    outline: none;
+    border-radius: 0px;
+    width: 110px;
+}
+
+input[type="checkbox"] {
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 3px;
+    border-radius: 0px;
+    width: auto;
+}
+
+select {
+    padding: 9px 5px;
+}
+
+label {
+    font-size: $labelFontSize;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+}
+
+.invalid label {
+    color: red;
+}
+
+input:focus,
+select:focus,
+.date-picker /deep/ input:focus {
+    outline: none;
+    border: 1px solid $dark-blue;
+    background-color: rgb(232, 240, 254);
+}
+
+.invalid input,
+.invalid select,
+.invalid /deep/ input {
+    border: 1px solid red;
+}
+
+select:invalid {
+    color: #777777;
+    font-weight: lighter;
+}
+
+option {
+    color: black;
+}
+
+input:focus,
+select:focus,
+.date-picker /deep/ input:focus {
+    outline: none;
+    border: 1px solid $dark-blue;
+    background-color: rgb(232, 240, 254);
+}
+
+.small-input {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    outline: none;
+    width: auto;
+    border: none;
+    background-color: white;
+}
+
+.small-input:focus {
+    outline: none;
+    border: none;
+    background-color: white;
+}
+
+.invalid input,
+.invalid select,
+.invalid /deep/ input {
+    border: 1px solid red;
+}
+
+.column1 {
+    margin: 10px 0px;
+    padding-right: 10px;
+    float: left;
+    width: 50%;
+    display: inline-block;
+}
+
+.column2 {
+    margin: 10px 0px;
+    padding-left: 10px;
+    float: left;
+    width: 50%;
+    display: inline-block;
+}
+
+.column span,
+.column1 span,
+.column2 span,
+.spaced span {
+    color: red;
+    font-size: $errorFontSize;
+    display: block;
+}
+
+.flex {
+    align-items: center;
+    display: flex;
+}
+
+.flex-grow {
+    flex: 1;
+}
+
+.dialing-code {
+    margin-right: 10px;
+    width: 100px;
+    text-align: center;
+    display: inline-block;
+}
+
+.dialing-code input,
+.dialing-code select {
+    text-align: center;
+    text-align-last: center;
+}
+
+.phone-number {
+    width: 100%;
+    display: inline-block;
+}

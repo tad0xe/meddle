@@ -1,0 +1,14 @@
+.horizontal-line {
+    border-top: 1px solid #d7d7d7;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+  
+    span {
+      top: 0;
+      right: 50%;
+      transform: translate(50%, -50% );
+      position: absolute;
+      background: white;
+    }
+  }

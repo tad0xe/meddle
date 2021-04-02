@@ -1,0 +1,1 @@
+export default [{ country: "United States", currency: "USD" }, { country: "United Kingdom", currency: "GBP" }, { country: "Norway", currency: "NOK" }, { country: "Canada", currency: "CAD" }, { country: "Germany", currency: "EUR" }, { country: "France", currency: "EUR" }]

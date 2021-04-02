@@ -107,7 +107,7 @@
           </div>
           <div class="relative max-width-280 fixed-height-100">
             <img
-              width="100%"
+              width="100%"     
               height="100%"
               src="../../../assets/images/row4-absolute-image.jpg"
             />
